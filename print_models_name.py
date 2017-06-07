@@ -15,8 +15,9 @@ with open('class_name.json','w') as outfile:
     for i,elem in enumerate(data):
         if not re.match('django',data[i]):
             myapp1 = apps.get_app_config(data[i])
-            app=myapp1.verbose_name            
-            myapp = apps.get_models(app.lower())
-            print myapp
-            #json.dump(myapp,outfile )
-        i+=1
+            app=myapp1.verbose_name
+            print myapp1
+myapp = apps.get_models(app.lower())
+print myapp
+# json.dump(myapp,outfile)
+        

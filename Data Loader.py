@@ -36,7 +36,7 @@ def jsontocsv(a):
         columns=str(columns +']')    
         for x in x:
             print columns
-            f.writerow([x["pk"],x["fields"]["question_text"],])
+            f.writerow(columns)
     csv_name = "csv"+json_name
     print "The csv file is created as",csv_name
     return csv_name
